@@ -19,8 +19,6 @@ namespace UnityTemplateProjects
             public float y;
             public float z;
 
-            private AudioManager audioManager;
-
             public void SetFromTransform(Transform t)
             {
                 pitch = t.eulerAngles.x;
