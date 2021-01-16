@@ -27,6 +27,8 @@ public class GazeLoad : MonoBehaviour
     private GameObject gazedAt;
     private string playerLocation = "start";
 
+    private AudioManager audioManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,8 @@ public class GazeLoad : MonoBehaviour
         rutscheLCamPoint = GameObject.Find("RutscheLCamPoint");
         rutscheMCamPoint = GameObject.Find("RutscheMCamPoint");
         rutscheRCamPoint = GameObject.Find("RutscheRCamPoint");
+
+        audioManager = FindObjectOfType<AudioManager>();
 
         reset();
     }
@@ -94,6 +98,7 @@ public class GazeLoad : MonoBehaviour
                 GameObject.Find("StartPointBeacon").GetComponent<Renderer>().enabled = false;
                 break;
             case "train":
+                
                 GameObject.Find("lowPolyTrainBeacon").GetComponent<Renderer>().enabled = false;
                 break;
             case "rutsche":
@@ -116,10 +121,12 @@ public class GazeLoad : MonoBehaviour
 
             case "lowPolyTrainBeacon":
                 reset();
+                audioManager.Play("TrainWistle");
                 playerLocation = "train";
                 activePath = "train";
                 TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 1;
                 followPath = true;
+                
 
                 break;
             case "RutscheRechts":
