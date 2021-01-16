@@ -130,18 +130,24 @@ public class GazeLoad : MonoBehaviour
 
                 break;
             case "RutscheRechts":
+                reset();
+                audioManager.Play("SlideSound");
                 activePath = "rutscheR";
                 RutscheRFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 3;
                 RutscheRFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().distanceTravelled = 0;
                 followPath = true;
                 break;
             case "RutscheMitte":
+                reset();
+                audioManager.Play("SlideSound");
                 activePath = "rutscheM";
                 RutscheMFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 3;
                 RutscheMFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().distanceTravelled = 0;
                 followPath = true;
                 break;
             case "RutscheLinks":
+                reset();
+                audioManager.Play("SlideSound");
                 activePath = "rutscheL";
                 RutscheLFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 3;
                 RutscheLFollowEmpty.GetComponent<PathCreation.Examples.PathFollower>().distanceTravelled = 0;
