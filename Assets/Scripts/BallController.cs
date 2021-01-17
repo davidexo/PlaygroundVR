@@ -11,6 +11,10 @@ public class BallController : MonoBehaviour
     private bool isGrabbed = false;
     private float timer;
     private bool timerStarted = false;
+    public GameObject popUpPrefab = null;
+    private int punkte = 0;
+
+    bool thrown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,7 @@ public class BallController : MonoBehaviour
             GetComponent<Rigidbody>().useGravity = false;    
             transform.position = playerCamera.transform.position + playerCamera.transform.forward * ballOffset;
             timerStarted = true;
+            thrown = false; 
         }
 
         // Der Timer wird hochgezählt
@@ -62,5 +67,24 @@ public class BallController : MonoBehaviour
     private void StartCount()
     {
         timer += Time.deltaTime;
+    }
+
+    public void popUp(string text, Color color){ // PopUpText erstellen und anzeigen lassen
+        GameObject popUp = Instantiate(popUpPrefab); // PopUp Objekt instantiieren und speichern
+        popUp.GetComponent<PopUpText>().content = text; // Text des PupUps anpassen an Übergabeparameter
+        popUp.GetComponent<PopUpText>().textColor = color; // Textfarbe anpassen an Übergabeparameter
+        Destroy(popUp, 5);
+    }
+
+    void OnTriggerEnter(Collider other) // Kollisionen feststellen
+    {
+        if (other.gameObject.CompareTag ("Korb")) // Tag des kollidierten Objekt mit Korb vergleichen
+        {
+            if(!thrown){
+                punkte++;
+                popUp("Punkte\n" + punkte.ToString(), Color.black);
+                thrown=true;
+            }
+        }
     }
 }
