@@ -206,6 +206,10 @@ public class GazeLoad : MonoBehaviour
         XRRig.transform.position = trainCamPoint.transform.position;
     }
 
+    private void TrainStop() {
+        TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 0;
+    }
+
     private void TrainSpeedUp()
     {
         TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed += 1;
