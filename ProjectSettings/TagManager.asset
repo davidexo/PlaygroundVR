@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Sound
   - Ground
-  - Korb
   layers:
   - Default
   - TransparentFX
