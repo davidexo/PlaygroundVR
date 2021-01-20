@@ -54,3 +54,21 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: TrainIdle
+    clip: {fileID: 8300000, guid: a34aed05984dcdb4d9b67e782a84873e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.8
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 45440802dbe1e904e8e5278917699a39, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.8
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
