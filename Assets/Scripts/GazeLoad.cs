@@ -156,6 +156,9 @@ public class GazeLoad : MonoBehaviour
             case "TrainSpeedUp":
                 TrainSpeedUp();
                 break;
+            case "TrainStop":
+                TrainStop();
+                break;
             case "TrainSpeedDown":
                 TrainSpeedDown();
                 break;
@@ -203,20 +206,24 @@ public class GazeLoad : MonoBehaviour
 
     private void trainDrive()
     {
-        XRRig.transform.position = trainCamPoint.transform.position;
+        //XRRig.transform.position = trainCamPoint.transform.position;
+        XRRig.transform.parent = trainCamPoint.transform;
     }
 
     private void TrainStop() {
         TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 0;
+        Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
     }
 
     private void TrainSpeedUp()
     {
         TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed += 1;
+        Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
     }
     private void TrainSpeedDown()
     {
         TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed -= 1;
+        Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
     }
     private void reset()
     {
