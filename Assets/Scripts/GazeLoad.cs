@@ -13,6 +13,7 @@ public class GazeLoad : MonoBehaviour
     private GameObject ball;
     private GameObject XRRig;
     private GameObject trainCamPoint;
+     private GameObject schaukelCamPoint;
     private GameObject TrainFollowerEmpty;
 
     private GameObject rutscheLCamPoint;
@@ -38,6 +39,7 @@ public class GazeLoad : MonoBehaviour
         ball = GameObject.Find("Ball");
         TrainFollowerEmpty = GameObject.Find("TrainFollowerEmpty");
         trainCamPoint = GameObject.Find("TrainCamPoint");
+        schaukelCamPoint = GameObject.Find("SchaukelPoint");
 
         RutscheLFollowEmpty = GameObject.Find("RutscheLFollowEmpty");
         RutscheMFollowEmpty = GameObject.Find("RutscheMFollowEmpty");
@@ -78,6 +80,9 @@ public class GazeLoad : MonoBehaviour
                 case "train":
                     XRRig.transform.position = trainCamPoint.transform.position;
                     break;
+                case "schaukel":
+                    XRRig.transform.position = schaukelCamPoint.transform.position;
+                    break;
                 case "rutscheL":
                     XRRig.transform.position = rutscheLCamPoint.transform.position;
                     break;
@@ -98,8 +103,10 @@ public class GazeLoad : MonoBehaviour
                 GameObject.Find("StartPointBeacon").GetComponent<Renderer>().enabled = false;
                 break;
             case "train":
-                
                 GameObject.Find("lowPolyTrainBeacon").GetComponent<Renderer>().enabled = false;
+                break;
+            case "schaukel": 
+                GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = false;
                 break;
             case "rutsche":
                 GameObject.Find("RutscheBeacon").GetComponent<Renderer>().enabled = false;
@@ -126,8 +133,6 @@ public class GazeLoad : MonoBehaviour
                 activePath = "train";
                 TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed = 1;
                 followPath = true;
-                
-
                 break;
             case "RutscheRechts":
                 reset();
@@ -172,7 +177,12 @@ public class GazeLoad : MonoBehaviour
                 playerLocation = "rutsche";
                 XRRig.transform.position = GameObject.Find("RutscheCamPoint").transform.position;
                 break;
-
+            case "SchaukelBeacon":
+                reset();
+                playerLocation = "schaukel";
+                activePath = "schaukel";
+                followPath = true;
+                break;
             default:
 
                 break;
@@ -228,6 +238,7 @@ public class GazeLoad : MonoBehaviour
     private void reset()
     {
         GameObject.Find("StartPointBeacon").GetComponent<Renderer>().enabled = true;
+        GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = true;
         GameObject.Find("lowPolyTrainBeacon").GetComponent<Renderer>().enabled = true;
         GameObject.Find("RutscheBeacon").GetComponent<Renderer>().enabled = true;
         GameObject.Find("RutscheRechts").GetComponent<Renderer>().enabled = false;
