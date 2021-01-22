@@ -112,6 +112,7 @@ MonoBehaviour:
   ball: {fileID: 1758750953614145452}
   ballOffset: 3.5
   throwForce: 600
+  popUpPrefab: {fileID: 0}
 --- !u!54 &7443109066774100328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,10 +157,10 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967294
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fde4f698971feda41a6687964b26a7c9, type: 2}
+  - {fileID: 2100000, guid: 30eee1d5fa90f0841857f46a5e509ef5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
