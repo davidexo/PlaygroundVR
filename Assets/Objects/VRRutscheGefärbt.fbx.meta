@@ -3,7 +3,27 @@ guid: 91e03ec420470ad4889b97b41c418161
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SlidePlastic
+    second: {fileID: 2100000, guid: 398e1546d6983144f91b226909383f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TubeMetal
+    second: {fileID: 2100000, guid: f574bb130c4713841b2e3922037ee8c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TubePlastic
+    second: {fileID: 2100000, guid: d3425bba929be274fbed74d672d329d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base
+    second: {fileID: 2100000, guid: eacc99c2d1c23ad4c987a6a171b52c16, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,32 @@ guid: cf80163315909574b892ba9ec213d1d0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gelb
+    second: {fileID: 2100000, guid: 88bfb22020822aa4fb2a82b44b0f2f96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Gr\xFCn"
+    second: {fileID: 2100000, guid: 7c4be3c7ff1a35140a6f6a1f9d47018c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 24b6b54a492cc1243a3905e8d41891f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 2bc4770b19edf92498ec6e5e43e2e7be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "bl\xFCte"
+    second: {fileID: 2100000, guid: d4e88f446cd16d343a6cfe011052c69d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
