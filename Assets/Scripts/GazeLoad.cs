@@ -76,6 +76,7 @@ public class GazeLoad : MonoBehaviour
             switch (activePath)
             {
                 case "train":
+                    //XRRig.transform.position = trainCamPoint.transform.position;
                     XRRig.transform.position = trainCamPoint.transform.position;
                     break;
                 case "rutscheL":
@@ -217,12 +218,15 @@ public class GazeLoad : MonoBehaviour
 
     private void TrainSpeedUp()
     {
-        TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed += 1;
-        Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
+        if(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed <= 3f) {
+            TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed += 0.5f;
+            Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
+        }
+
     }
     private void TrainSpeedDown()
     {
-        TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed -= 1;
+        TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed -= 0.5f;
         Debug.Log(TrainFollowerEmpty.GetComponent<PathCreation.Examples.PathFollower>().speed);
     }
     private void reset()
