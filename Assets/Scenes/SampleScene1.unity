@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ae6258a93e5330e4b9dddba269ac1163,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.950147
+      value: 47.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae6258a93e5330e4b9dddba269ac1163,
         type: 3}
@@ -316,7 +316,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ae6258a93e5330e4b9dddba269ac1163,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.23029
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae6258a93e5330e4b9dddba269ac1163,
         type: 3}
@@ -6606,6 +6606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "VRRutscheGef\xE4rbt"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91e03ec420470ad4889b97b41c418161,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e03ec420470ad4889b97b41c418161, type: 3}
 --- !u!1001 &1153068884
@@ -7223,7 +7228,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d5e52aedcfa06384aa19062a3bcf088c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.3
+      value: 46.369854
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e52aedcfa06384aa19062a3bcf088c,
         type: 3}
@@ -7233,7 +7238,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d5e52aedcfa06384aa19062a3bcf088c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.8
+      value: 2.19971
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e52aedcfa06384aa19062a3bcf088c,
         type: 3}
@@ -8798,7 +8803,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dd7c2ae2d23bb4741963dc23743c3cc2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.52
+      value: 41.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd7c2ae2d23bb4741963dc23743c3cc2,
         type: 3}
@@ -8808,7 +8813,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dd7c2ae2d23bb4741963dc23743c3cc2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.91
+      value: 13.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd7c2ae2d23bb4741963dc23743c3cc2,
         type: 3}
@@ -9740,6 +9745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rutsche
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbcad84a2d1df8741bfd3f7748102df5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: fbcad84a2d1df8741bfd3f7748102df5,
         type: 3}
@@ -12697,7 +12707,7 @@ Animator:
   m_GameObject: {fileID: 2012844308}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9b7a9b3f1d60585448b209978a01c727, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae6a482e14d38164fa78cf70766ac052, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
