@@ -13,13 +13,14 @@ public class BallController : MonoBehaviour
     private bool timerStarted = false;
     public GameObject popUpPrefab = null;
     private int punkte = 0;
+    private Vector3 startPoint;
 
     bool thrown = false;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        startPoint = ball.transform.position;
     }
 
     // Update is called once per frame
@@ -28,7 +29,8 @@ public class BallController : MonoBehaviour
         // Ball wird vor Kamera platziert und der Timer gestartet
         if(isGrabbed)
         {
-            GetComponent<Rigidbody>().useGravity = false;    
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().Sleep();
             transform.position = playerCamera.transform.position + playerCamera.transform.forward * ballOffset;
             timerStarted = true;
             thrown = false; 
@@ -85,6 +87,15 @@ public class BallController : MonoBehaviour
                 popUp("Punkte\n" + punkte.ToString(), Color.black);
                 thrown=true;
             }
+        }
+    }
+
+    void OnTriggerExit(Collider other) // Kollisionen feststellen
+    {
+        if (other.gameObject.CompareTag ("BasketballBereich")) // Tag des kollidierten Objekt mit Korb vergleichen
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            ball.transform.position = startPoint;
         }
     }
 }
