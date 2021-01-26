@@ -161,12 +161,15 @@ public class GazeLoad : MonoBehaviour
                 break;
             case "TrainSpeedUp":
                 TrainSpeedUp();
+                audioManager.Play("TrainWistle");
                 break;
             case "TrainStop":
                 TrainStop();
+                audioManager.Play("TrainWistle");
                 break;
             case "TrainSpeedDown":
                 TrainSpeedDown();
+                audioManager.Play("TrainWistle");
                 break;
             case "StartPointBeacon":
                 reset();
