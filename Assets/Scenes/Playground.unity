@@ -9418,7 +9418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430911518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee0dd1732684d448bf9422ba0797656, type: 3}
   m_Name: 
@@ -10390,7 +10390,7 @@ MonoBehaviour:
   m_CameraGameObject: {fileID: 1430911518}
   m_TrackingOriginMode: 1
   m_TrackingSpace: 3
-  m_CameraYOffset: 1.36144
+  m_CameraYOffset: 1.35
 --- !u!4 &1598248904
 Transform:
   m_ObjectHideFlags: 0
