@@ -88,10 +88,7 @@ public class BallController : MonoBehaviour
                 thrown=true;
             }
         }
-    }
 
-    void OnTriggerExit(Collider other) // Kollisionen feststellen
-    {
         if (other.gameObject.CompareTag ("BasketballBereich")) // Tag des kollidierten Objekt mit Korb vergleichen
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
