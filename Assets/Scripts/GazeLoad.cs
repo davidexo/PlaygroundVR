@@ -13,7 +13,7 @@ public class GazeLoad : MonoBehaviour
     private GameObject ball;
     private GameObject XRRig;
     private GameObject trainCamPoint;
-     private GameObject schaukelCamPoint;
+    private GameObject schaukelCamPoint;   // teleportationspunkt für die Schaukel
     private GameObject TrainFollowerEmpty;
 
     private GameObject rutscheLCamPoint;
@@ -39,7 +39,7 @@ public class GazeLoad : MonoBehaviour
         ball = GameObject.Find("Ball");
         TrainFollowerEmpty = GameObject.Find("TrainFollowerEmpty");
         trainCamPoint = GameObject.Find("TrainCamPoint");
-        schaukelCamPoint = GameObject.Find("SchaukelPoint");
+        schaukelCamPoint = GameObject.Find("SchaukelPoint"); // Das Empty Gameobjekt "SchaukelPoint" wird schaukelCamPoint zugewiesen
 
         RutscheLFollowEmpty = GameObject.Find("RutscheLFollowEmpty");
         RutscheMFollowEmpty = GameObject.Find("RutscheMFollowEmpty");
@@ -82,7 +82,7 @@ public class GazeLoad : MonoBehaviour
                     XRRig.transform.position = trainCamPoint.transform.position;
                     break;
                 case "schaukel":
-                    XRRig.transform.position = schaukelCamPoint.transform.position;
+                    XRRig.transform.position = schaukelCamPoint.transform.position; // XRRig position  wird zu der des Schaukelpoints geändert
                     break;
                 case "rutscheL":
                     XRRig.transform.position = rutscheLCamPoint.transform.position;
@@ -107,7 +107,7 @@ public class GazeLoad : MonoBehaviour
                 GameObject.Find("lowPolyTrainBeacon").GetComponent<Renderer>().enabled = false;
                 break;
             case "schaukel": 
-                GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = false;
+                GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = false; //Schaukel teleportpfiel wird ausgeblendet
                 break;
             case "rutsche":
                 GameObject.Find("RutscheBeacon").GetComponent<Renderer>().enabled = false;
@@ -181,11 +181,11 @@ public class GazeLoad : MonoBehaviour
                 playerLocation = "rutsche";
                 XRRig.transform.position = GameObject.Find("RutscheCamPoint").transform.position;
                 break;
-            case "SchaukelBeacon":
-                reset();
-                playerLocation = "schaukel";
-                activePath = "schaukel";
-                followPath = true;
+            case "SchaukelBeacon": //Wenn auf den Schaukel teleport punkt geschaut wird :
+                reset(); // wird reset aufgerufen
+                playerLocation = "schaukel"; //playerLocation zu Schaukel geändert
+                activePath = "schaukel"; // activepath ebenfalls zu Schaukel geändert
+                followPath = true; // folowpath auf true gesetzt
                 break;
             default:
 
@@ -245,7 +245,7 @@ public class GazeLoad : MonoBehaviour
     private void reset()
     {
         GameObject.Find("StartPointBeacon").GetComponent<Renderer>().enabled = true;
-        GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = true;
+        GameObject.Find("SchaukelBeacon").GetComponent<Renderer>().enabled = true; // Schaukel teleportpfeil wird wieder eingeblendet 
         GameObject.Find("lowPolyTrainBeacon").GetComponent<Renderer>().enabled = true;
         GameObject.Find("RutscheBeacon").GetComponent<Renderer>().enabled = true;
         GameObject.Find("RutscheRechts").GetComponent<Renderer>().enabled = false;
